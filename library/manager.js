@@ -11,6 +11,7 @@ class Manager {
     }
     constructor(name, id, email, officeNumber) {
         // super for calling parent  class Employee properties and methods
+        // noinspection JSAnnotator
         super(name, id, email);
         this._role = 'Manager'
         this._officeNumber = officeNumber;
