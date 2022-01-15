@@ -46,7 +46,7 @@ const questions = {
         },
         {
             type: "list",
-            name: "name",
+            name: "addNew",
             message: "Do you want to add another employee?",
             choices: ["Yes", "No"]
         }
@@ -87,7 +87,47 @@ const questions = {
         },
         {
             type: "list",
-            name: "name",
+            name: "addNew",
+            message: "Do you want to add another employee?",
+            choices: ["Yes", "No"]
+        }
+    ],
+    INTERN : [
+        {
+            type : "input",
+            name : "name",
+            message: "What is the intern's name?",
+            validate: (value) => {
+                return value ? true : "Please enter the intern's name.";
+            }
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "What is the intern's Id?",
+            validate: (value) => {
+                return value ? true : "Please enter intern's id.";
+            }
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is the intern's email address?",
+            validate: (value) => {
+                return value ? true : "Please enter valid email address.";
+            }
+        },
+        {
+            type: "input",
+            name: "school",
+            message: "What school is the intern attending?",
+            validate: (value) => {
+                return value ? true : "Please enter the school name.";
+            }
+        },
+        {
+            type: "list",
+            name: "addNew",
             message: "Do you want to add another employee?",
             choices: ["Yes", "No"]
         }
