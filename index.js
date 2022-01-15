@@ -11,45 +11,86 @@ let team = [];
 
 /*Initialize*/
 const questions = {
-     MANAGER: [
-      {
-        type: "input",
-        name: "name",
-        message: "What is the Manager's name?",
-        validate: (value) => {
-            return value ? true : "Please enter the manager's name.";
+    MANAGER: [
+        {
+            type: "input",
+            name: "name",
+            message: "What is the Manager's name?",
+            validate: (value) => {
+                return value ? true : "Please enter the manager's name.";
+            },
         },
-      },
-      {
-        type: "input",
-        name: "id",
-        message: "What is the Managers Employee Id?",
-        validate : (value) => {
-            return value ? true : "Please enter manager's id.";
+        {
+            type: "input",
+            name: "id",
+            message: "What is the Managers Employee Id?",
+            validate: (value) => {
+                return value ? true : "Please enter manager's id.";
+            }
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is the Manager's email address?",
+            validate: (value) => {
+                return value ? true : "Please enter valid email address.";
+            }
+        },
+        {
+            type: "input",
+            name: "officeNumber",
+            message: "What is the office phone number?",
+            validate: (value) => {
+                return value ? true : "Please enter manager's office number.";
+            }
+        },
+        {
+            type: "list",
+            name: "name",
+            message: "Do you want to add another employee?",
+            choices: ["Yes", "No"]
         }
-      },
-      {
-        type: "input",
-        name: "email",
-        message: "What is the Manager's email address?",
-        validate : (value) => {
-            return value ? true : "Please enter valid email address.";
-        }
-      },
-      {
-        type: "input",
-        name: "officeNumber",
-        message: "What is the office phone number?",
-        validate : (value) => {
-            return value ? true : "Please enter manager's office number.";
-        }
-      },
-      {
-          type: "list",
-          name: "name",
-          message: "Do you want to add another employee?",
-          choices: ["Yes", "No"]
-      }
     ],
-    
+
+    ENGINEER: [
+        {
+            type: "input",
+            name: "name",
+            message: "What is the engineer's name?",
+            validate: (value) => {
+                return value ? true : "Please enter the engineer's name.";
+            },
+        },
+        {
+            type: "input",
+            name: "id",
+            message: "What is the engineer's employee Id?",
+            validate: (value) => {
+                return value ? true : "Please enter engineer's id.";
+            }
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is the engineer's email address?",
+            validate: (value) => {
+                return value ? true : "Please enter valid email address.";
+            }
+        },
+        {
+            type: "input",
+            name: "github",
+            message: "What is the engineer's github repository's name?",
+            validate: (value) => {
+                return value ? true : "Please enter valid github repository name.";
+            }
+        },
+        {
+            type: "list",
+            name: "name",
+            message: "Do you want to add another employee?",
+            choices: ["Yes", "No"]
+        }
+    ]
+
 };
