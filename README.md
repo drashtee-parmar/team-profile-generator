@@ -176,5 +176,6 @@ You are required to submit the following for review:
 ## Reference
 - [Inquirer](https://www.npmjs.com/package/inquirer)
 - [Super](https://www.w3schools.com/jsref/jsref_class_super.asp)
+-  [Generate card Pricing example](https://getbootstrap.com/docs/5.1/examples/pricing/)
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

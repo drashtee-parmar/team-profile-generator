@@ -2,17 +2,19 @@
 // github—GitHub username
 // getGithub()
 // getRole()—overridden to return 'Engineer'
-class Engineer {
-    get github() {
-        return this._github;
-    }
+// noinspection JSAnnotator
 
-    get role() {
-        return this._role;
-    }
-    constructor(name, id, email, github) {
-        super(name, id, email)
-        this._role = 'Engineer';
-        this._github = github;
-    }
+class Engineer {
+  get github() {
+    return this._github;
+  }
+
+  get role() {
+    return this._role;
+  }
+  constructor(name, id, email, github) {
+    super(name, id, email);
+    this._role = "Engineer";
+    this._github = github;
+  }
 }
