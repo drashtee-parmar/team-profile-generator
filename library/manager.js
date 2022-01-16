@@ -1,19 +1,16 @@
-// In addition to Employee's properties and methods, Manager will also have the following:
-// officeNumber
-// getRole()—overridden to return 'Manager'
-class Manager {
-    get officeNumber() {
-        return this._officeNumber;
-    }
+const Employee = require('./employee')
 
-    get role() {
-        return this._role;
-    }
+class Manager extends Employee{
+    getOfficeNumber() { return this.officeNumber; }
+
+    getRole() {return 'Manager';}
+
     constructor(name, id, email, officeNumber) {
         // super for calling parent  class Employee properties and methods
-        // noinspection JSAnnotator
         super(name, id, email);
-        this._role = 'Manager'
-        this._officeNumber = officeNumber;
+        this.role = 'Manager'
+        this.officeNumber = officeNumber;
     }
 }
+
+module.exports = Manager;

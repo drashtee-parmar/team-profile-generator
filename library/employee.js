@@ -1,32 +1,17 @@
-// The first class is an Employee parent class with the following properties and methods:
-// name
-// id
-// email
-// getName()
-// getId()
-// getEmail()
-// getRole()—returns 'Employee'
+class Employee {
+  getName() {return this.name;}
 
-class Employee{
-    get name() {
-        return this._name;
-    }
+  getId() {return this.id;}
 
-    get id() {
-        return this._id;
-    }
+  getEmail() {return this.email;}
 
-    get email() {
-        return this._email;
-    }
+  getRole() {return 'Employee';}
 
-    get role() {
-        return this._role;
-    }
-    constructor(name, id, email){
-        this._role = 'Employee';
-        this._name = name;
-        this._id = id;
-        this._email = email;
-    }
+  constructor(name, id, email) {
+    this.name = name;
+    this.id = id;
+    this.email = email;
+  }
 }
+
+module.exports = Employee;

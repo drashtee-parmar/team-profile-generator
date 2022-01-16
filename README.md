@@ -172,10 +172,13 @@ You are required to submit the following for review:
 * A sample HTML file generated using your application.
 
 * The URL of the GitHub repository, with a unique name and a readme describing the project.
-
+## Deployment
+- [live](https://dparmar32.github.io/team-profile-generator/)
 ## Reference
 - [Inquirer](https://www.npmjs.com/package/inquirer)
 - [Super](https://www.w3schools.com/jsref/jsref_class_super.asp)
--  [Generate card Pricing example](https://getbootstrap.com/docs/5.1/examples/pricing/)
+- [MDN Super](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)
+- [Generate card Pricing example](https://getbootstrap.com/docs/5.1/examples/pricing/)
+- [Module Export](https://www.sitepoint.com/understanding-module-exports-exports-node-js/)
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

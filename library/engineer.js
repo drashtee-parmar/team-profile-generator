@@ -1,20 +1,15 @@
-// In addition to Employee's properties and methods, Engineer will also have the following:
-// github—GitHub username
-// getGithub()
-// getRole()—overridden to return 'Engineer'
-// noinspection JSAnnotator
+const Employee = require('./employee')
 
-class Engineer {
-  get github() {
-    return this._github;
-  }
+class Engineer extends Employee{
+  getGithub() { return this.github; }
 
-  get role() {
-    return this._role;
-  }
+  getRole() { return this.role; }
+  
   constructor(name, id, email, github) {
     super(name, id, email);
-    this._role = "Engineer";
-    this._github = github;
+    this.role = "Engineer";
+    this.github = github;
   }
 }
+
+module.exports = Engineer;
