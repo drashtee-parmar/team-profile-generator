@@ -179,6 +179,7 @@ You are required to submit the following for review:
 - [Super](https://www.w3schools.com/jsref/jsref_class_super.asp)
 - [MDN Super](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/super)
 - [Generate card Pricing example](https://getbootstrap.com/docs/5.1/examples/pricing/)
+- [Font Awesome](https://fontawesome.com/account/cdn)
 - [Module Export](https://www.sitepoint.com/understanding-module-exports-exports-node-js/)
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

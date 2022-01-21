@@ -3,6 +3,8 @@ const fs = require("fs");
 const Manager = require("./library/manager");
 const Engineer = require("./library/engineer");
 const Intern = require("./library/intern");
+const {generateTeamCardHTML, generateTeamProfileHTML, genCardHTML} = require("./src/generateTeam");
+
 let team = [];
 const userQuestions = () => {
     inquirer
@@ -16,7 +18,7 @@ const userQuestions = () => {
                 },
             },
         ])
-        .then((userAnswers) => {
+        .then(userAnswers => {
             const user = userAnswers.user;
             team.push(user);
             managerQuestions();
@@ -37,6 +39,7 @@ const managerQuestions = () => {
                     type: "input",
                     name: "id",
                     message: "What is the Managers Employee Id?",
+                    default: "11",
                     validate: (value) => {
                         return value ? true : "Please enter manager's id.";
                     },
@@ -45,6 +48,7 @@ const managerQuestions = () => {
                     type: "input",
                     name: "email",
                     message: "What is the Manager's email address?",
+                    default: "test@mgr.com",
                     validate: (value) => {
                         return value ? true : "Please enter valid email address.";
                     },
@@ -53,12 +57,13 @@ const managerQuestions = () => {
                     type: "input",
                     name: "officeNumber",
                     message: "What is the office phone number?",
+                    default: "122334567",
                     validate: (value) => {
                         return value ? true : "Please enter manager's office number.";
                     },
                 },
             ])
-            .then((managerAnswers) => {
+            .then(managerAnswers => {
                     const manager = new Manager(
                         managerAnswers.id,
                         managerAnswers.name,
@@ -79,6 +84,7 @@ const engineerQuestions = () => {
                 type: "input",
                 name: "name",
                 message: "What is the engineer's name?",
+                default: "Drashtee",
                 validate: (value) => {
                     return value ? true : "Please enter the engineer's name.";
                 },
@@ -87,6 +93,7 @@ const engineerQuestions = () => {
                 type: "input",
                 name: "id",
                 message: "What is the engineer's employee Id?",
+                default: "22",
                 validate: (value) => {
                     return value ? true : "Please enter engineer's id.";
                 },
@@ -95,6 +102,7 @@ const engineerQuestions = () => {
                 type: "input",
                 name: "email",
                 message: "What is the engineer's email address?",
+                default: "test@engineer.com",
                 validate: (value) => {
                     return value ? true : "Please enter valid email address.";
                 },
@@ -103,6 +111,7 @@ const engineerQuestions = () => {
                 type: "input",
                 name: "github",
                 message: "What is the engineer's github repository's name?",
+                default: "dparmar32",
                 validate: (value) => {
                     return value ? true : "Please enter valid github repository name.";
                 },
@@ -134,6 +143,7 @@ const internQuestions = () => {
                 type: "input",
                 name: "id",
                 message: "What is the intern's Id?",
+                default: "33",
                 validate: (value) => {
                     return value ? true : "Please enter intern's id.";
                 },
@@ -142,6 +152,7 @@ const internQuestions = () => {
                 type: "input",
                 name: "email",
                 message: "What is the intern's email address?",
+                default: "test@intern.com",
                 validate: (value) => {
                     return value ? true : "Please enter valid email address.";
                 },
@@ -150,19 +161,22 @@ const internQuestions = () => {
                 type: "input",
                 name: "school",
                 message: "What school is the intern attending?",
+                default: "Georgia Institute of Technology",
                 validate: (value) => {
                     return value ? true : "Please enter the school name.";
                 },
             },
 
         ])
-        .then((internAnswers) => {
+        .then(internAnswers => {
             let intern = new Intern(
                 internAnswers.name,
                 internAnswers.id,
                 internAnswers.email,
                 internAnswers.school
             );
+
+
             team.push(intern);
             addMember();
 
@@ -190,16 +204,30 @@ function addMember() {
                 case "Intern":
                     internQuestions();
                     break;
-                case "I don't want to add any team member":
+                default:
                     buildTeam();
                     break
             }
         })
 }
 
-
-function buildTeam() {
-
+function buildTeam(){
+    for (let i = 0; i < team.length; i++){
+        let employee = team[i]
+        generateTeamCardHTML(employee);
+        genCardHTML.push(generateTeamCardHTML(employee));
+        const writeFile = () => {
+            fs.writeFile('./dist/index.html', generateTeamProfileHTML(), err => {
+                if(err){
+                    rejects(err);
+                    return;
+                }
+            });
+        };
+        writeFile();
+    }
 }
+
+
 
 userQuestions();

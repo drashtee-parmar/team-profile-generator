@@ -3,7 +3,7 @@ const Employee = require('./employee')
 class Manager extends Employee{
     getOfficeNumber() { return this.officeNumber; }
 
-    getRole() {return 'Manager';}
+    getRole() {return this.role;}
 
     constructor(name, id, email, officeNumber) {
         // super for calling parent  class Employee properties and methods
