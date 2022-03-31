@@ -1,6 +1,5 @@
 .team-heading {
-    background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);ground-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
     color: #ffffff;
 }
@@ -16,10 +15,7 @@
     max-width: 280px;
     width: 90%;
     min-height: 22rem;
-    /*background-color: #007bff;*/
-    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
-    color: white;
-    display: flex;
+    background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);    display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
@@ -30,7 +26,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #f6f7f8;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
 }
 
 .list-group-item {
