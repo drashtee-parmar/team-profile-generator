@@ -45,7 +45,10 @@ The following image shows a mock-up of the generated HTML’s appearance and fun
 ![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/10-object-oriented-programming-homework-demo.png)
 
 ## Project Visuals
+![Team profile image](Assets/teamrocks.png)
+
 ![Current Project Visuals](Assets/TeamProfileGenerator.gif)
+
 ## Getting Started
 
 This homework will combine many of the skills we've covered so far. In addition to the User Story and Acceptance Criteria, we’ve provided some guidelines to help get started.
