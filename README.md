@@ -44,8 +44,8 @@ The following image shows a mock-up of the generated HTML’s appearance and fun
 
 ![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/10-object-oriented-programming-homework-demo.png)
 
-The styling in the image is just an example, so feel free to add your own.
-
+## Project Visuals
+![Current Project Visuals](Assets/TeamProfileGenerator.gif)
 ## Getting Started
 
 This homework will combine many of the skills we've covered so far. In addition to the User Story and Acceptance Criteria, we’ve provided some guidelines to help get started.
@@ -181,5 +181,3 @@ You are required to submit the following for review:
 - [Generate card Pricing example](https://getbootstrap.com/docs/5.1/examples/pricing/)
 - [Font Awesome](https://fontawesome.com/account/cdn)
 - [Module Export](https://www.sitepoint.com/understanding-module-exports-exports-node-js/)
----
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

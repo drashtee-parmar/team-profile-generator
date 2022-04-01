@@ -1,6 +1,6 @@
-// create the team
+/* This is a function that takes in a team and returns a string of html. */
 const generateTeam = (team) => {
-    // create the manager
+/* This is a function that takes in a manager and returns a string of html. */
     const generateManager = (manager) => {
         return `
         <div class="card employee-card">
@@ -18,8 +18,7 @@ const generateTeam = (team) => {
     </div>
         `;
     };
-
-    // create the html for engineers
+/* This is a function that takes in an engineer and returns a string of html. */
     const generateEngineer = (engineer) => {
         return `
         <div class="card employee-card">
@@ -37,8 +36,7 @@ const generateTeam = (team) => {
 </div>
         `;
     };
-
-    // create the html for interns
+/* This is a function that takes in an intern and returns a string of html. */
     const generateIntern = (intern) => {
         return `
         <div class="card employee-card">
@@ -56,36 +54,35 @@ const generateTeam = (team) => {
 </div>
         `;
     };
-
+/* This is creating an array of strings. */
     const html = [];
-
+    /* This is pushing the string of html to the html array - Manager. */
     html.push(
         team
             .filter((employee) => employee.getRole() === "Manager")
             .map((manager) => generateManager(manager))
     );
+    /* This is pushing the string of html to the html array - Engineer. */
     html.push(
         team
             .filter((employee) => employee.getRole() === "Engineer")
             .map((engineer) => generateEngineer(engineer))
             .join("")
     );
+  /* This is pushing the string of html to the html array - Intern. */
     html.push(
         team
             .filter((employee) => employee.getRole() === "Intern")
             .map((intern) => generateIntern(intern))
             .join("")
     );
-
     return html.join("");
 };
-
-// export function to generate entire page
+//Generate Html Page
 module.exports = (team) => {
     return `
     <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -94,7 +91,6 @@ module.exports = (team) => {
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/6cdd58adbf.js" crossorigin="anonymous"></script></head>
-
 <body>
     <div class="container-fluid">
         <div class="row">
