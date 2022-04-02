@@ -47,7 +47,7 @@ The following image shows a mock-up of the generated HTML’s appearance and fun
 ## Project Visuals
 ![Team profile image](Assets/teamrocks.png)
 
-![Current Project Visuals](Assets/TeamProfileGenerator.gif)
+[Current Project Visuals](https://youtu.be/JH6hBOnFGS0)
 
 ## Getting Started
 
